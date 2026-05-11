@@ -1,0 +1,140 @@
+Perfekt! 🎉
+
+**Schritt 1** — Klick in "Name your file..." und tippe:
+`index.html`
+
+**Schritt 2** — Klick in den großen leeren Bereich und füge den gesamten HTML Code ein. Ich schicke ihn dir jetzt — er ist lang, aber du musst nur alles markieren und einfügen.
+
+Kopiere alles hier:
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunesien Kompass | multikultifamily</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--gold:#b8943e;--gold-pale:#f9f3e3;--sand:#f5ede0;--sand-deep:#e8d9c4;--sand-dark:#c4aa85;--rouge:#8b2635;--rouge-light:#f5e8ea;--text:#2a1f0e;--text-mid:#6b5a42;--text-light:#9e8a6f;--white:#fffdf8;}
+body{font-family:'Jost',sans-serif;background:var(--sand);color:var(--text);margin:0;padding:0;}
+#app{max-width:680px;margin:0 auto;padding-bottom:2rem;}
+.border-strip{height:6px;background:linear-gradient(90deg,var(--rouge),var(--gold),var(--rouge));}
+.header{background:var(--white);padding:2rem 1.5rem 1.5rem;text-align:center;border-bottom:1px solid var(--sand-deep);}
+.header-ornament{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.25em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;}
+.logo-wrap{display:flex;justify-content:center;margin:0.5rem 0 1rem;}
+.header h1{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--text);letter-spacing:0.06em;margin-bottom:0.3rem;}
+.header h1 em{font-style:italic;color:var(--gold);}
+.header-tagline{font-size:11px;letter-spacing:0.15em;color:var(--text-light);text-transform:uppercase;margin-bottom:0.8rem;}
+.header-desc{font-size:13px;color:var(--text-mid);line-height:1.6;max-width:420px;margin:0 auto;}
+.divider{display:flex;align-items:center;gap:10px;padding:1rem 1.5rem;}
+.divider-line{flex:1;height:0.5px;background:var(--sand-dark);}
+.divider-gem{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);}
+.grid-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-light);text-align:center;margin-bottom:0.6rem;}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sand-deep);margin:0 1.5rem;border:1px solid var(--sand-deep);border-radius:4px;overflow:hidden;}
+.topic-card{background:var(--white);padding:1rem 0.6rem;text-align:center;cursor:pointer;transition:background 0.2s;display:flex;flex-direction:column;align-items:center;gap:5px;}
+.topic-card:hover,.topic-card.active{background:var(--gold-pale);}
+.topic-card.active .ct{color:var(--gold);}
+.ti{font-size:1.2rem;}.ct{font-size:11px;font-weight:500;color:var(--text);line-height:1.3;}.cs{font-size:10px;color:var(--text-light);line-height:1.2;}
+.info-panel{margin:1px 1.5rem 0;background:var(--white);border:1px solid var(--sand-deep);border-top:2px solid var(--gold);display:none;}
+.info-header{padding:0.85rem 1.25rem;border-bottom:0.5px solid var(--sand-deep);display:flex;align-items:center;gap:8px;}
+.info-header h2{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--text);}
+.info-content{padding:0.85rem 1.25rem;}
+.info-item{margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:0.5px solid var(--sand-deep);}
+.info-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.info-item h3{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.25rem;}
+.info-item p{font-size:12.5px;color:var(--text-mid);line-height:1.65;}
+.tip-box{margin-top:0.4rem;background:var(--gold-pale);border-left:2px solid var(--gold);padding:0.4rem 0.75rem;font-size:11.5px;color:#7a5c1e;line-height:1.5;}
+.quick-qs{padding:0.6rem 1.25rem;display:flex;flex-wrap:wrap;gap:5px;border-top:0.5px solid var(--sand-deep);}
+.quick-q{font-size:11px;padding:4px 10px;border:0.5px solid var(--gold);color:var(--gold);background:transparent;cursor:pointer;border-radius:2px;font-family:'Jost',sans-serif;}
+.quick-q:hover{background:var(--gold);color:#fff;}
+.chat-section{margin:0 1.5rem;background:var(--white);border:1px solid var(--sand-deep);border-top:none;}
+.chat-head{padding:0.75rem 1.25rem;background:var(--sand);border-bottom:0.5px solid var(--sand-deep);display:flex;align-items:center;gap:8px;}
+.chat-dot{width:8px;height:8px;border-radius:50%;background:#6aaa64;}
+.chat-head-title{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid);}
+.chat-msgs{padding:1rem 1.25rem;min-height:90px;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;}
+.msg{max-width:86%;padding:0.6rem 0.9rem;font-size:13px;line-height:1.6;}
+.msg.user{align-self:flex-end;background:var(--gold);color:#fff;border-radius:12px 12px 2px 12px;}
+.msg.ai{align-self:flex-start;background:var(--sand);color:var(--text);border:0.5px solid var(--sand-deep);border-radius:12px 12px 12px 2px;}
+.chat-input-row{padding:0.75rem 1.25rem;border-top:0.5px solid var(--sand-deep);background:var(--sand);display:flex;gap:8px;}
+.chat-input{flex:1;font-family:'Jost',sans-serif;font-size:13px;padding:0.5rem 0.85rem;border:0.5px solid var(--sand-dark);background:#fff;color:var(--text);outline:none;border-radius:2px;}
+.chat-input:focus{border-color:var(--gold);}
+.chat-input::placeholder{color:var(--text-light);}
+.send-btn{background:var(--gold);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;padding:0.5rem 1rem;cursor:pointer;border-radius:2px;}
+.send-btn:disabled{opacity:0.4;cursor:not-allowed;}
+.cta{margin:0 1.5rem;padding:1rem 1.25rem;background:var(--rouge-light);border:0.5px solid rgba(139,38,53,0.2);border-top:2px solid var(--rouge);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.cta p{flex:1;font-size:13px;color:var(--text-mid);line-height:1.5;}
+.cta strong{color:var(--rouge);font-weight:500;}
+.cta-btn{background:var(--rouge);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;padding:0.55rem 1rem;cursor:pointer;border-radius:2px;white-space:nowrap;}
+.footer{text-align:center;padding:1rem;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin:0 1.5rem;border-top:0.5px solid var(--sand-deep);}
+@media(max-width:500px){.topic-grid{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="border-strip"></div>
+<div class="header">
+  <div class="header-ornament">✦ multikultifamily ✦</div>
+  <div class="logo-wrap">
+    <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="46" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+      <circle cx="50" cy="50" r="40" stroke="#c9a84c" stroke-width="0.5" fill="#f9f3e3"/>
+      <circle cx="50" cy="50" r="26" fill="#8b2635"/>
+      <circle cx="57" cy="46" r="21" fill="#f9f3e3"/>
+      <polygon points="50,34 52.4,41.6 60.4,41.6 54,46.4 56.4,54 50,49.2 43.6,54 46,46.4 39.6,41.6 47.6,41.6" fill="#8b2635"/>
+      <circle cx="50" cy="4" r="2" fill="#c9a84c"/><circle cx="50" cy="96" r="2" fill="#c9a84c"/>
+      <circle cx="4" cy="50" r="2" fill="#c9a84c"/><circle cx="96" cy="50" r="2" fill="#c9a84c"/>
+    </svg>
+  </div>
+  <h1>Tunesien <em>Kompass</em></h1>
+  <div class="header-tagline">🇩🇪 Dein Guide zwischen zwei Welten 🇹🇳</div>
+  <p class="header-desc">Alles was du wissen musst wenn du einen tunesischen Partner oder eine tunesische Partnerin hast.</p>
+</div>
+<div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+<p class="grid-label">Wähle ein Thema</p>
+<div class="topic-grid" id="tg"></div>
+<div class="info-panel" id="ip"></div>
+<div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+<div class="chat-section">
+  <div class="chat-head"><div class="chat-dot"></div><div class="chat-head-title">Dein Assistent</div></div>
+  <div class="chat-msgs" id="cm"><div class="msg ai">Salam! Wähl ein Thema oben oder stell mir direkt deine Frage zu Tunesien. 🌙</div></div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="ci" type="text" placeholder="Deine Frage..."/>
+    <button class="send-btn" id="sb" onclick="send()">Fragen</button>
+  </div>
+</div>
+<div class="cta">
+  <p>Du lebst die binationale Realität täglich. Mein Kurs <strong>„Herz in zwei Welten"</strong> gibt dir die Werkzeuge um dich selbst nicht zu verlieren.</p>
+  <button class="cta-btn" onclick="window.open('https://multikultifamily.de','_blank')">Kurs ansehen</button>
+</div>
+<div class="footer">© Maria Larbi | @multikultifamily | Kein Ersatz für Rechtsberatung</div>
+<div class="border-strip"></div>
+</div>
+<script>
+var T=[
+  {id:'visum',i:'✈️',t:'Visum & Einreise',s:'Botschaft Tunis',items:[{h:'Wartezeit',p:'Aktuell mehr als 12 Monate Wartezeit bei der deutschen Botschaft in Tunis.',tip:'Termin nie über externe Berater buchen.'},{h:'Dokumente',p:'Reisepass, Heiratsurkunde. Alle tunesischen Dokumente müssen beglaubigt und übersetzt sein.'},{h:'Deutschkenntnisse A1',p:'Ein A1 Zertifikat vom Goethe Institut, ÖSD oder telc wird benötigt.'}],qs:['Welche Dokumente brauche ich?','Wie lange dauert es?','Wo registriere ich mich?']},
+  {id:'heirat',i:'💍',t:'Heirat & Recht',s:'Anerkennung & Schutz',items:[{h:'Heirat in Tunesien',p:'Seit 1973 muss man nicht konvertieren. Die Ehe ist vollständig legal gültig.'},{h:'Anerkennung in Deutschland',p:'Apostillierte Heiratsurkunde plus beglaubigte Übersetzung beim Standesamt einreichen.'},{h:'Ehevertrag',p:'In Deutschland gilt Zugewinngemeinschaft, in Tunesien Gütertrennung.'}],qs:['Muss ich konvertieren?','Wie erkenne ich meine Ehe an?','Brauche ich einen Ehevertrag?']},
+  {id:'kinder',i:'👧',t:'Kinder & Familie',s:'Pässe & Sorgerecht',items:[{h:'Doppelte Staatsbürgerschaft',p:'Seit 2024 müssen sich Kinder nicht mehr entscheiden. Beide Pässe dürfen behalten werden.'},{h:'Sorgerecht',p:'Das Kindeswohl gilt als oberstes Prinzip. Für Auslandsreisen braucht man die Zustimmung des anderen Elternteils.'},{h:'Kinderschutz',p:'Deutschland und Tunesien sind Vertragsstaaten des Haager Übereinkommens.'}],qs:['Können meine Kinder beide Pässe behalten?','Was passiert mit dem Sorgerecht?','Wie schütze ich meine Kinder?']},
+  {id:'kranken',i:'🏥',t:'Krankenversicherung',s:'Gesundheit in beiden Ländern',items:[{h:'Partner in Deutschland',p:'Der tunesische Partner ist über dich kostenlos familienversichert sobald er gemeldet ist.'},{h:'In Tunesien leben',p:'Die staatliche Krankenversicherung gilt wenn dein Partner dort arbeitet.'},{h:'Internationale KV',p:'Für Familien die pendeln ist eine internationale Krankenversicherung unverzichtbar.'}],qs:['Wie melde ich meinen Partner an?','Bin ich in Tunesien versichert?','Welche Versicherung empfiehlst du?']},
+  {id:'wohnen',i:'🏡',t:'Wohnen & Alltag',s:'Kosten & Leben',items:[{h:'Mietpreise',p:'Tunis Stadtmitte: 500 bis 1.000 Euro. Küste: 350 bis 700 Euro. Ländliche Regionen ab 150 Euro.'},{h:'Lebenshaltungskosten',p:'Eine Familie lebt gut für 1.500 bis 2.500 Euro monatlich inklusive Miete.'},{h:'Carte de Séjour',p:'Wer länger als 3 Monate bleibt braucht eine Aufenthaltserlaubnis. Jährliche Erneuerung nötig.'}],qs:['Was kostet das Leben in Tunesien?','Wie beantrage ich die Carte de Séjour?','Gibt es Communities für Deutsche?']},
+  {id:'immobilien',i:'🏠',t:'Immobilien',s:'Kaufen in Tunesien',items:[{h:'Darf ich kaufen?',p:'Ja. Mit Genehmigung der Zentralbank können EU Bürger kaufen. Kauf muss in Euro finanziert werden.'},{h:'Kosten',p:'Notargebühren ca. 3 bis 5 Prozent. Wohnungen in Tunis ab ca. 80.000 Euro.'},{h:'Alternative',p:'Langzeitmiete ab 12 Monaten ist flexibler und ohne bürokratischen Aufwand.'}],qs:['Kann ich in Tunesien kaufen?','Was kostet ein Haus?','Brauche ich einen Anwalt?']},
+  {id:'arbeit',i:'💼',t:'Arbeit & Geld',s:'Jobs & Überweisungen',items:[{h:'Remote Work',p:'Viele Deutsche arbeiten remote für deutsche Arbeitgeber aus Tunesien. Steuerberatung empfohlen.'},{h:'Geld überweisen',p:'Wise ist die günstigste Option mit ca. 0,5 Prozent Gebühren.'},{h:'Selbstständig',p:'Selbstständigkeit als Microenterprise ist einfacher als eine offizielle Anstellung.'}],qs:['Darf ich remote aus Tunesien arbeiten?','Wie überweise ich günstig Geld?','Muss ich Steuern zahlen?']},
+  {id:'kultur',i:'🌙',t:'Kultur & Islam',s:'Ramadan & Gesellschaft',items:[{h:'Islam im Alltag',p:'Tunesien ist ein moderates muslimisches Land. Alkohol ist in Restaurants legal erhältlich.'},{h:'Gastfreundschaft',p:'Gastfreundschaft ist heilig. Immer etwas annehmen auch nur ein Schluck Tee.'},{h:'Ramadan',p:'Ramadan verändert Öffnungszeiten und Stimmung. Respekt wird erwartet.'}],qs:['Was bedeutet Ramadan?','Was bedeutet Gastfreundschaft?','Wie kleide ich mich richtig?']},
+  {id:'kueche',i:'🍋',t:'Tunesische Küche',s:'Rezepte & Zutaten',items:[{h:'Die Grundlage',p:'Harissa, Olivenöl, Kümmel, Koriander und frisches Gemüse. Couscous am Freitag ist Familienritual.'},{h:'Must Know Gerichte',p:'Brik ist ein frittiertes Teigblatt mit Ei. Lablabi ist Kichererbsensuppe. Chakchouka sind Eier in Tomatensauce.'},{h:'Zutaten in Deutschland',p:'Türkische und arabische Supermärkte führen fast alles: Harissa, Couscous und Halal Fleisch.'}],qs:['Wie mache ich Couscous?','Wo bekomme ich tunesische Zutaten?','Wie mache ich Harissa?']}
+];
+var active=null,hist=[],busy=false;
+function render(){var h='';T.forEach(function(t){h+='<div class="topic-card'+(active===t.id?' active':'')+'" onclick="pick(\''+t.id+'\')"><span class="ti">'+t.i+'</span><div class="ct">'+t.t+'</div><div class="cs">'+t.s+'</div></div>';});document.getElementById('tg').innerHTML=h;}
+function pick(id){active=(active===id)?null:id;render();var p=document.getElementById('ip');if(!active){p.style.display='none';return;}var t=T.filter(function(x){return x.id===id;})[0];var h='<div class="info-header"><span style="font-size:1rem">'+t.i+'</span><h2>'+t.t+'</h2></div><div class="info-content">';t.items.forEach(function(it){h+='<div class="info-item"><h3>'+it.h+'</h3><p>'+it.p+'</p>'+(it.tip?'<div class="tip-box">✦ '+it.tip+'</div>':'')+'</div>';});h+='</div><div class="quick-qs">';t.qs.forEach(function(q){h+='<button class="quick-q" onclick="askQ(\''+q.replace(/'/g,"\\'")+'\')" >→ '+q+'</button>';});h+='</div>';p.innerHTML=h;p.style.display='block';p.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function askQ(q){document.getElementById('ci').value=q;send();}
+function send(){var inp=document.getElementById('ci');var msg=inp.value.trim();if(!msg||busy)return;inp.value='';busy=true;document.getElementById('sb').disabled=true;var el=document.getElementById('cm');var u=document.createElement('div');u.className='msg user';u.textContent=msg;el.appendChild(u);var l=document.createElement('div');l.className='msg ai';l.id='lm';l.textContent='Einen Moment...';el.appendChild(l);el.scrollTop=el.scrollHeight;hist.push({role:'user',content:msg});
+fetch('/.netlify/functions/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist,system:'Du bist der Tunesien Assistent von Maria Larbi (@multikultifamily). Antworte auf Deutsch, warmherzig. Keine Listen. Maximal 4 Sätze.'})})
+.then(function(r){return r.json();}).then(function(d){var lm=document.getElementById('lm');var ans=d.content||'Fehler';hist.push({role:'assistant',content:ans});lm.textContent=ans;busy=false;document.getElementById('sb').disabled=false;el.scrollTop=el.scrollHeight;}).catch(function(e){document.getElementById('lm').textContent='Fehler: '+e.message;busy=false;document.getElementById('sb').disabled=false;});}
+document.getElementById('ci').addEventListener('keydown',function(e){if(e.key==='Enter')send();});
+render();
+</script>
+</body>
+</html>
+```
+
+Dann **"Commit changes"** klicken! 🤍
